@@ -1,0 +1,61 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "reminder_title",
+            "size": "Large",
+            "color": "Dark",
+            "weight": "Bolder"
+          },
+          {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "<at>acounts name</at>"
+          },
+          {
+            "type": "TextBlock",
+            "wrap": true,
+            "text": "text contents"
+          },
+          {
+            "type": "ActionSet",
+            "actions": [
+              {
+                "type": "Action.OpenUrl",
+                "title": "ZOOM",
+                "url": "zoom URL"
+              },
+              {
+                "type": "Action.OpenUrl",
+                "title": "documents",
+                "url": "documents URL"
+              }
+            ],
+            "horizontalAlignment": "Center"
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "msteams": {
+          "entities": [
+            {
+              "type": "mention",
+              "text": "<at>acounts name</at>",
+              "mentioned": {
+                "id": "mail address",
+                "name": "acounts name"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
